@@ -31,7 +31,7 @@
 (defvar slow-keys-last-press 0)
 
 (defgroup slow-keys nil
-  "Type slowly to avoid RSI."
+  "Customization of user options for slow-keys."
   :group 'convenience)
 
 (defcustom slow-keys-sleep-for 0.5
