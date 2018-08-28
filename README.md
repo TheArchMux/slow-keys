@@ -1,9 +1,16 @@
 # slow-keys
 
+[![License: GPL
+v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 Emacs minor mode to avoid RSI.
 
 It forces you to type slowly by inhibiting typing for a customizable amount of
 time and issuing a warning when you type too quickly.
+
+## Screenshot
+
+![Screenshot](https://github.com/manuel-uberti/slow-keys/blob/master/screenshot.png)
 
 ## Setup
 
