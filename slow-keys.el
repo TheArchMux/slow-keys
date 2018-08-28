@@ -30,12 +30,18 @@
 (defvar slow-keys-repeat 0)
 (defvar slow-keys-last-press 0)
 
+(defgroup slow-keys nil
+  "Type slowly to avoid RSI."
+  :group 'convenience)
+
 (defcustom slow-keys-sleep-for 0.5
   "Time, in seconds, to wait before start typing again."
+  :group 'slow-keys
   :type 'number)
 
 (defcustom slow-keys-min-delay 0.1
   "Delay, in seconds, between key presses."
+  :group 'slow-keys
   :type 'number)
 
 (defun slow-keys-slow-down (msg)
