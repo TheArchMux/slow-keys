@@ -3,7 +3,7 @@
 Emacs minor mode to avoid RSI.
 
 It forces you to type slowly by inhibiting typing for a customizable amount of
-time and issuing a warning when you type too quick.
+time and issuing a warning when you type too quickly.
 
 ## Setup
 
