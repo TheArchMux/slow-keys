@@ -8,6 +8,10 @@ Emacs minor mode to avoid RSI.
 It forces you to type slowly by inhibiting typing for a customizable amount of
 time and issuing a warning when you type too quickly.
 
+Chris Done created the [original
+package](https://github.com/chrisdone/chrisdone-emacs/blob/master/packages/slow-keys/slow-keys.el). I merely
+extracted it from its configuration and packaged it for MELPA.
+
 ## Screenshot
 
 ![Screenshot](https://github.com/manuel-uberti/slow-keys/blob/master/screenshot.png)
