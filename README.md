@@ -18,11 +18,11 @@ extracted it from its configuration and polished it for MELPA.
 
 ## Setup
 
-`slow-keys` is not available on MELPA yet. You can easily install and configure
-it with [use-package](https://github.com/jwiegley/use-package):
+`slow-keys` is available on MELPA. You can easily install and configure it with
+[use-package](https://github.com/jwiegley/use-package):
 
 ``` emacs-lisp
 (use-package slow-keys
-  :load-path "/path/to/slow-keys"
+  :ensure t
   :init (slow-keys-mode 1))
 ```
