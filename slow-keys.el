@@ -94,7 +94,7 @@
   :lighter " Slow"
   :require 'slow-keys
   :global t
-  (if (bound-and-true-p slow-keys-mode)
+  (if slow-keys-mode
       (add-hook 'post-command-hook #'slow-keys-do)
     (remove-hook 'post-command-hook #'slow-keys-do)))
 
