@@ -79,7 +79,7 @@
       (cond
        ((and (slow-keys-typing-cmd this-command)
              (slow-keys-typing-cmd last-command)
-             (< (- now slow-keys-last-press) 0.1))
+             (< (- now slow-keys-last-press) slow-keys-min-delay))
         (slow-keys-slow-down "Slow down typing!"))
        ((and (not (slow-keys-typing-cmd this-command))
              (not (slow-keys-typing-cmd last-command))
