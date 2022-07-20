@@ -12,6 +12,10 @@ Chris Done created [the original
 package](https://github.com/chrisdone/chrisdone-emacs/blob/master/packages/slow-keys/slow-keys.el). I merely
 extracted it from its configuration and polished it for MELPA.
 
+## Note
+
+This package is currently _UNMAINTAINED_. Feel free to reach out if you want to step in as the new maintainer.
+
 ## Screenshot
 
 ![Screenshot](https://github.com/manuel-uberti/slow-keys/blob/master/screenshot.png)
