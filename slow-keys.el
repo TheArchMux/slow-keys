@@ -47,6 +47,10 @@
   :group 'slow-keys
   :type 'number)
 
+(defcustom slow-keys-warning-hook nil
+  "Hook run when key presses exceed `slow-keys-min-delay'."
+  :type hook)
+
 (defun slow-keys-slow-down (msg)
   "Display warning MSG and sleep before let typing begin again."
   (message "%s" (propertize msg 'face 'compilation-error))
