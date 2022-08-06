@@ -90,7 +90,6 @@
 ;;;###autoload
 (define-minor-mode slow-keys-mode
   "Type slowly to avoid RSI."
-  nil
   :lighter " Slow"
   :require 'slow-keys
   :global t
