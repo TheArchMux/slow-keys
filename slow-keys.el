@@ -70,26 +70,26 @@
 (defun slow-keys--do ()
   "Check whether typing or running a command is done slowly enough."
   (unless (or executing-kbd-macro
-              (slow-keys-ignore-cmd this-command))
+              (slow-keys-ignore-command this-command))
     (setq slow-keys-repeat
           (if (eq last-command this-command)
               (1+ slow-keys-repeat)
             0))
     (when (and (> slow-keys-repeat 3)
-               (not (slow-keys-typing-cmd this-command)))
-      (slow-keys-slow-down
+               (not (slow-keys--typing-cmd this-command)))
+      (slow-keys--slow-down
        (format "Use repetition numbers or more high-level commands: %S"
                this-command)))
     (let ((now (float-time)))
       (cond
-       ((and (slow-keys-typing-cmd this-command)
-             (slow-keys-typing-cmd last-command)
+       ((and (slow-keys--typing-cmd this-command)
+             (slow-keys--typing-cmd last-command)
              (< (- now slow-keys-last-press) slow-keys-min-delay))
-        (slow-keys-slow-down "Slow down typing!"))
-       ((and (not (slow-keys-typing-cmd this-command))
-             (not (slow-keys-typing-cmd last-command))
+        (slow-keys--slow-down "Slow down typing!"))
+       ((and (not (slow-keys--typing-cmd this-command))
+             (not (slow-keys--typing-cmd last-command))
              (< (- now slow-keys-last-press) slow-keys-min-delay))
-        (slow-keys-slow-down "Slow down command running!")))
+        (slow-keys--slow-down "Slow down command running!")))
       (setq slow-keys-last-press now))))
 
 ;;;###autoload
