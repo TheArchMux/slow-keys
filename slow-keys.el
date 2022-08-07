@@ -49,7 +49,7 @@
 
 (defcustom slow-keys-warning-hook nil
   "Hook run when key presses exceed `slow-keys-min-delay'."
-  :type hook)
+  :type 'hook)
 
 (defcustom slow-keys-ignore-command '(mwheel-scroll)
   "Check whether CMD should be ignored by `slow-keys-do'."
