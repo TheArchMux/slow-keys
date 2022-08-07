@@ -55,19 +55,19 @@
   "Check whether CMD should be ignored by `slow-keys-do'."
   :type 'list)
 
-(defun slow-keys-slow-down (msg)
+(defun slow-keys--slow-down (msg)
   "Display warning MSG and sleep before let typing begin again."
   (message "%s" (propertize msg 'face 'compilation-error))
   (redisplay)
   (sleep-for slow-keys-sleep-for)
   (run-hooks 'slow-keys-warning-hook))
 
-(defun slow-keys-typing-cmd (cmd)
+(defun slow-keys--typing-cmd (cmd)
   "Check whether CMD is `self-insert-command' or `org-self-insert-command'."
   (or (eq cmd 'self-insert-command)
       (eq cmd 'org-self-insert-command)))
 
-(defun slow-keys-do ()
+(defun slow-keys--do ()
   "Check whether typing or running a command is done slowly enough."
   (unless (or executing-kbd-macro
               (slow-keys-ignore-cmd this-command))
