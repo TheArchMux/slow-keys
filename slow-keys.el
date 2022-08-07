@@ -51,6 +51,10 @@
   "Hook run when key presses exceed `slow-keys-min-delay'."
   :type hook)
 
+(defcustom slow-keys-ignore-command '(mwheel-scroll)
+  "Check whether CMD should be ignored by `slow-keys-do'."
+  :type 'list)
+
 (defun slow-keys-slow-down (msg)
   "Display warning MSG and sleep before let typing begin again."
   (message "%s" (propertize msg 'face 'compilation-error))
@@ -62,10 +66,6 @@
   "Check whether CMD is `self-insert-command' or `org-self-insert-command'."
   (or (eq cmd 'self-insert-command)
       (eq cmd 'org-self-insert-command)))
-
-(defun slow-keys-ignore-cmd (cmd)
-  "Check whether CMD should be ignored by slow typing check."
-  (eq cmd 'mwheel-scroll))
 
 (defun slow-keys-do ()
   "Check whether typing or running a command is done slowly enough."
