@@ -70,7 +70,7 @@
 (defun slow-keys--do ()
   "Check whether typing or running a command is done slowly enough."
   (unless (or executing-kbd-macro
-              (slow-keys-ignore-command this-command))
+              (memq this-command slow-keys-ignore-command))
     (setq slow-keys-repeat
           (if (eq last-command this-command)
               (1+ slow-keys-repeat)
