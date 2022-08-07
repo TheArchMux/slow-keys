@@ -55,7 +55,8 @@
   "Display warning MSG and sleep before let typing begin again."
   (message "%s" (propertize msg 'face 'compilation-error))
   (redisplay)
-  (sleep-for slow-keys-sleep-for))
+  (sleep-for slow-keys-sleep-for)
+  (run-hooks 'slow-keys-warning-hook))
 
 (defun slow-keys-typing-cmd (cmd)
   "Check whether CMD is `self-insert-command' or `org-self-insert-command'."
