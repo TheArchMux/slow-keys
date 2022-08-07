@@ -99,8 +99,8 @@
   :require 'slow-keys
   :global t
   (if slow-keys-mode
-      (add-hook 'post-command-hook #'slow-keys-do)
-    (remove-hook 'post-command-hook #'slow-keys-do)))
+      (add-hook 'post-command-hook #'slow-keys--do)
+    (remove-hook 'post-command-hook #'slow-keys--do)))
 
 (provide 'slow-keys)
 
