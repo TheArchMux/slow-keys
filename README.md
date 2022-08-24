@@ -26,3 +26,12 @@ extracted it from its configuration and polished it for MELPA.
   :ensure t
   :init (slow-keys-mode 1))
 ```
+
+## Configuration without `use-package`
+
+``` emacs-lisp
+
+(setq slow-keys-sleep-for 1.0)
+(setq slow-keys-min-delay 0.03)
+
+```
